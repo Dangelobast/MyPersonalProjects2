@@ -17,6 +17,29 @@
     box-sizing: border-box;
     
 }
+body{
+    font-family: "League";
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    background-position: top left;
+    height: 100vh;
+
+    
+}
+body::after{
+    content: ""; 
+    display: block; 
+    position: fixed; 
+    width: 84vw;
+    height: 100vh;
+    right: -7%;
+    top: 0%;
+    background-image: url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100rem;
+    
+}
 .wrapper{
     display: flex;
     justify-content: center;
@@ -141,6 +164,14 @@ main{
     }
     .rating-item{
         flex-direction: column;
+    }
+    body{
+        background-image: url(../images/bg-pattern-top-mobile.svg);
+        background-size: 100vw;
+    }
+    body:after{
+        background-image: url(../images/bg-pattern-bottom-mobile.svg);
+        background-size: 100vw;
     }
 }
 
