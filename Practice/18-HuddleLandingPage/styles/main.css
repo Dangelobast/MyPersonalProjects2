@@ -1,0 +1,201 @@
+:root{
+--var-violet:hsl(257, 40%, 49%);
+--var-soft-magenta:hsl(300, 69%, 71%);
+}
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "PoppinsSemiBold";
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "PoppinsRegular"; 
+    background-color: #999;
+    background-color: var(--var-violet);
+    
+}
+.background-container{
+    background-image: url(../images/bg-desktop.svg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--var-violet);
+
+   
+    
+    
+}
+.header{
+    height: 8rem;
+}
+.logo{
+    margin-left: 6rem;
+    margin-top: 2.6rem;
+}
+main{
+    min-height:calc(100vh - 8rem);
+    margin: 0 6rem;
+}
+.center-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.4rem;
+    margin-top: 2rem;
+
+    
+}
+.left-content-image{
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.left-content-container{
+    flex: 1.3;
+
+}
+.right-content-container{
+    color: #fff;
+    flex: 1;
+}
+.right-content-container h1{
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+.right-content-container p{
+    margin-top: 1.2rem;
+    font-size: .9rem;
+}
+.right-content-container button{
+    border: none;
+    font-family: "PoppinsRegular";
+    background-color: #fff;
+    color:#888;
+    padding: 1rem 4rem;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 1.4rem;
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.438);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.right-content-container button:hover{
+    background-color: var(--var-soft-magenta);
+    color: #fff;
+    box-shadow: 0 1px 5px 2px rgba(0,0,0,0.438);
+}
+.icons-container{
+    display: flex;
+    justify-content: end;
+    gap: .6rem;
+}
+.icons{
+    width: 2.4rem;
+    fill:#fff;
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+.icons:hover{
+   transform: scale(1.1);
+}
+
+
+@media (max-width:98em){
+    .background-container{
+        background-size: cover;
+        background-position: -120px;
+    }
+    .left-content-container{
+        flex: 1.7;
+    }
+
+}
+@media (max-width:85rem){
+    .left-content-container{
+        flex: 2.7;
+    }
+    .right-content-container h1{
+        font-size: 1.6rem;
+    }
+    .right-content-container p{
+        font-size: .85rem;
+    }
+}
+@media (max-width:75em){
+    .logo{
+        margin-left: 1.4rem;
+        margin-top: 2.6rem;
+    }
+    main{
+        margin: 0 1.4rem;
+        min-height:calc(100svh - 8rem);
+    }
+    section{
+        gap: 1.5rem;
+    }
+    .left-content-container{
+        flex: 3;
+        
+    }
+    
+    .icons-container{
+        margin-top: 1.8rem;
+    }
+    section{
+        margin-top: 5rem;
+    }
+    .right-content-container h1{
+        font-size: 1.4rem;
+    }
+    .right-content-container p{
+        font-size: .8rem;
+    }
+}
+@media (max-width:50em){
+    .logo{
+        width: 12rem
+    }
+    section{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0rem;
+    }
+    .left-content-container{
+        flex: 1;
+    }
+    .right-content-container{
+        flex: 1;
+    }
+    .background-container{
+        background-image: url(../images/bg-mobile.svg);
+        background-size: contain;
+        background-position: top;
+    }
+    .icons-container{
+        justify-content: center;
+    }
+    .center-container{
+        flex-direction: column;
+    }
+}
+@media (max-width:40em){
+    section{
+        margin-top: 4rem;
+    }
+}
+
