@@ -1,9 +1,9 @@
 @font-face {
-    font-family: ;
+    font-family: arial;
     src: url();
 }
 :root{
-
+ --var--violet: hsl(257, 40%, 49%);
 }
 *, *::after, *::before{
     margin: 0;
@@ -12,5 +12,5 @@
 }
 body{
     box-sizing: border-box;
-    font-family: ;
+    font-family: arial;
 }
